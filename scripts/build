@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+# Clean dist directory
+rm -rf dist
+
+# Compile TypeScript
+tsc --skipLibCheck
+
+# Copy CSS file
+cp src/githubStats.css dist/githubStats.css
+
+echo "✅ Build complete!"
+
